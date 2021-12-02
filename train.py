@@ -18,3 +18,14 @@ class Route():
                 rnd = np.random.randint(1, self.dnaLength)
             self.dna.append(rnd)
         self.dna.append(0)
+
+    # Building the Crossover method
+    def mix(self, dna1, dna2):
+        self.dna = dna1.copy()
+
+        for i in range(self.dnaLength - 1):
+            if np.random.rand() <= 0.5:
+                previous = self.dna[i]
+                inx = self.dna.index(dna2[i])
+                self.dna[inx] = previous
+                self.dna[i] = dna2[i]
