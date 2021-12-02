@@ -1,8 +1,9 @@
-# Space Discover: Genetic Algorithms - Training File 
+# Space Discover: Genetic Algorithms - Training File
 
 # Importing the libraries
 import numpy as np
 from environment import Environment
+
 
 # Creating the bots
 class Route():
@@ -29,3 +30,12 @@ class Route():
                 inx = self.dna.index(dna2[i])
                 self.dna[inx] = previous
                 self.dna[i] = dna2[i]
+
+        # Random Partial Mutations 1
+        for i in range(self.dnaLength - 1):
+            if np.random.rand() <= 0.1:
+                previous = self.dna[i]
+                rnd = np.random.randint(1, self.dnaLength)
+                inx = self.dna.index(rnd)
+                self.dna[inx] = previous
+                self.dna[i] = rnd
