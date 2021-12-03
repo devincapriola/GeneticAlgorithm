@@ -71,3 +71,12 @@ generation = 0
 bestDist = np.inf
 while True:
     generation += 1
+
+    # Evaluating the population
+    for route in population:
+        env.reset()
+
+        for i in range(dnaLength):
+            action = route.dna[i]
+
+            route.distance += env.step(action, 'none')
