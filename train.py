@@ -87,3 +87,9 @@ while True:
 
     if sortedPop[0].distance < bestDist:
         bestDist = sortedPop[0].distance
+
+    # Adding best previous bots to the population
+    for i in range(nSelected):
+        best = sortedPop[i]
+        best.distance = 0
+        population.append(best)
