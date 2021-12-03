@@ -65,3 +65,9 @@ population = list()
 for i in range(populationSize):
     route = Route(dnaLength)
     population.append(route)
+
+# Starting the main loop
+generation = 0
+bestDist = np.inf
+while True:
+    generation += 1
