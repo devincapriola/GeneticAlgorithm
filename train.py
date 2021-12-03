@@ -60,3 +60,8 @@ nSelected = 5
 env = Environment()
 dnaLength = len(env.planets)
 population = list()
+
+# Creating the first population
+for i in range(populationSize):
+    route = Route(dnaLength)
+    population.append(route)
