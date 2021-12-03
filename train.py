@@ -79,4 +79,11 @@ while True:
         for i in range(dnaLength):
             action = route.dna[i]
 
-            route.distance += env.step(action, 'none')
+            route.distance += env.step(action, "none")
+
+    # Sorting the population
+    sortedPop = sorted(population, key=lambda x: x.distance)
+    population.clear()
+
+    if sortedPop[0].distance < bestDist:
+        bestDist = sortedPop[0].distance
