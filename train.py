@@ -50,3 +50,13 @@ class Route():
                     self.dna.pop(prevInx)
                 else:
                     self.dna.pop(prevInx + 1)
+
+
+# Initializing the main code
+populationSize = 50
+mutationRate = 0.1
+nSelected = 5
+
+env = Environment()
+dnaLength = len(env.planets)
+population = list()
