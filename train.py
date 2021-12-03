@@ -39,3 +39,14 @@ class Route():
                 inx = self.dna.index(rnd)
                 self.dna[inx] = previous
                 self.dna[i] = rnd
+
+            # Random Partial Mutations 2
+            elif np.random.rand() <= 0.1:
+                rnd = np.random.randint(1, self.dnaLength)
+                prevInx = self.dna.index(rnd)
+                self.dna.insert(i, rnd)
+
+                if i >= prevInx:
+                    self.dna.pop(prevInx)
+                else:
+                    self.dna.pop(prevInx + 1)
