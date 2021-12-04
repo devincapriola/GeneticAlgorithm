@@ -93,3 +93,23 @@ while True:
         best = sortedPop[i]
         best.distance = 0
         population.append(best)
+
+    # Filling in the rest of the population
+    left = populationSize - nSelected
+
+    for i in range(left):
+        newRoute = Route(dnaLength)
+        if np.random.rand() <= mutationRate:
+            population.append(newRoute)
+        else:
+            inx1 = np.random.randint(0, nSelected)
+            inx2 = np.random.randint(0, nSelected)
+            while inx1 == inx2:
+                inx2 = np.random.randint(0, nSelected)
+
+            dna1 = sortedPop[inx1].dna
+            dna2 = sortedPop[inx2].dna
+
+            newRoute.mix(dna1, dna2)
+
+            population.append(newRoute)
