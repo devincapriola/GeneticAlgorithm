@@ -119,7 +119,7 @@ while True:
 
     for i in range(dnaLength):
         action = sortedPop[0].dna[i]
-        _ = env.step(action, "none")
+        _ = env.step(action, "normal")
 
     if generation % 100 == 0:
         env.reset()
@@ -130,4 +130,4 @@ while True:
 
     print("Generation: " + str(generation) +
           "Shortest Distance: {:.2f}".format(bestDist) +
-          "light years")
+          " light years")
