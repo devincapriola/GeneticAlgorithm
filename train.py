@@ -128,6 +128,6 @@ while True:
             action = sortedPop[0].dna[i]
             _ = env.step(action, "beautiful")
 
-    print("Generation:", generation + str(generation) +
+    print("Generation: " + str(generation) +
           "Shortest Distance: {:.2f}".format(bestDist) +
           "light years")
