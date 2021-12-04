@@ -113,3 +113,21 @@ while True:
             newRoute.mix(dna1, dna2)
 
             population.append(newRoute)
+
+    # Displaying the results
+    env.reset()
+
+    for i in range(dnaLength):
+        action = sortedPop[0].dna[i]
+        _ = env.step(action, "none")
+
+    if generation % 100 == 0:
+        env.reset()
+
+        for i in range(dnaLength):
+            action = sortedPop[0].dna[i]
+            _ = env.step(action, "beautiful")
+
+    print("Generation:", generation + str(generation) +
+          "Shortest Distance: {:.2f}".format(bestDist) +
+          "light years")
