@@ -129,5 +129,5 @@ while True:
             _ = env.step(action, "beautiful")
 
     print("Generation: " + str(generation) +
-          "Shortest Distance: {:.2f}".format(bestDist) +
+          " Shortest Distance: {:.2f}".format(bestDist) +
           " light years")
