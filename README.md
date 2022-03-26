@@ -1,4 +1,4 @@
-## GeneticAlgorithm
+## Genetic Algorithm
 Space Discover: Genetic Algorithm
 
 ## :package: Download and Setup
