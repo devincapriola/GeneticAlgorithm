@@ -23,13 +23,13 @@ class Environment():
         
         self.screen = pg.display.set_mode((self.width, self.height))
         
-        self.origSpriteRocket = pg.image.load('rocket.png')
+        self.origSpriteRocket = pg.image.load('./assets/rocket.png')
         self.spriteRocket = self.origSpriteRocket
         self.rocketWidth = self.spriteRocket.get_rect().size[0]
         self.rocketHeight = self.spriteRocket.get_rect().size[1]
         self.rotation = 0
         
-        self.spriteBackground = pg.image.load('space.jpg')
+        self.spriteBackground = pg.image.load('./assets/space.jpg')
         self.spriteBackground = pg.transform.smoothscale(self.spriteBackground, (self.width, self.height))
         
         
